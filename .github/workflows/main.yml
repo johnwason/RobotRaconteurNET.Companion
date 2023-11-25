@@ -21,6 +21,16 @@ jobs:
         run: dotnet restore
       - name: dotnet build
         run: dotnet build /p:Platform="Any Cpu" /p:Configuration=Release
+      - name: tree
+        if: always()
+        run: tree /f
+      - name: Archive all files
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: artifacts
+          path: |
+            *
   build-linux:
     runs-on: ubuntu-latest
     steps:
