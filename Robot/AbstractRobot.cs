@@ -776,10 +776,10 @@ namespace RobotRaconteur.Companion.Robot
                                         pos_cmd_j[i] = pos_cmd.command[i] * (Math.PI / 180.0);
                                         break;
                                     case JointPositionUnits.ticks_rot:
-                                        pos_cmd_j[i] = (pos_cmd.command[i] / (double)(2 ^ 20)) * (Math.PI * 2.0);
+                                        pos_cmd_j[i] = (pos_cmd.command[i] / (double)(1 << 20)) * (Math.PI * 2.0);
                                         break;
                                     case JointPositionUnits.nanoticks_rot:
-                                        pos_cmd_j[i] = (pos_cmd.command[i] / (double)(2 ^ 20) * 1e9) * (Math.PI * 2.0);
+                                        pos_cmd_j[i] = (pos_cmd.command[i] / (double)(1 << 20) * 1e9) * (Math.PI * 2.0);
                                         break;
                                     default:
                                         {
@@ -844,10 +844,10 @@ namespace RobotRaconteur.Companion.Robot
                                         vel_cmd_j[i] = vel_cmd.command[i] * (Math.PI / 180.0);
                                         break;
                                     case JointVelocityUnits.ticks_rot_second:
-                                        vel_cmd_j[i] = (vel_cmd.command[i] / (double)(2 ^ 20)) * (Math.PI * 2.0);
+                                        vel_cmd_j[i] = (vel_cmd.command[i] / (double)(1 << 20)) * (Math.PI * 2.0);
                                         break;
                                     case JointVelocityUnits.nanoticks_rot_second:
-                                        vel_cmd_j[i] = (vel_cmd.command[i] / (double)(2 ^ 20) * 1e9) * (Math.PI * 2.0);
+                                        vel_cmd_j[i] = (vel_cmd.command[i] / (double)(1 << 20) * 1e9) * (Math.PI * 2.0);
                                         break;
                                     default:
                                         {
