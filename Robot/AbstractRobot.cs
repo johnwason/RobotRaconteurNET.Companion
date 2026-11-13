@@ -491,8 +491,8 @@ namespace RobotRaconteur.Companion.Robot
             a_rob_state.joint_velocity_command = rob_state.joint_velocity_command;
             a_rob_state.kin_chain_tcp = rob_state.kin_chain_tcp;
             a_rob_state.trajectory_running = rob_state.trajectory_running;
-            a_rob_state.joint_position_units = Enumerable.Repeat<byte>((byte)JointPositionUnits.radian, 7).ToArray();
-            a_rob_state.joint_effort_units = Enumerable.Repeat<byte>((byte)JointEffortUnits.newton_meter, 7).ToArray();
+            a_rob_state.joint_position_units = Enumerable.Repeat<byte>((byte)JointPositionUnits.radian, _joint_count).ToArray();
+            a_rob_state.joint_effort_units = Enumerable.Repeat<byte>((byte)JointEffortUnits.newton_meter, _joint_count).ToArray();
             a_rob_state.trajectory_running = _trajectory_valid;
             a_rob_state.trajectory_time = _trajectory_current_time;
             a_rob_state.trajectory_max_time = _trajectory_max_time;
