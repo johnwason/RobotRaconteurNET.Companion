@@ -32,11 +32,14 @@ namespace RobotRaconteur.Companion.Robot
         public AbstractTool(ToolInfo tool_info)
         {
             _tool_info = tool_info;
-            _tool_uuid = tool_info.device_info.device.uuid;
             this.tool_info = tool_info;
             if (tool_info != null)
             {
                 this.device_info = tool_info.device_info;
+                if (tool_info.device_info?.device != null)
+                {
+                    _tool_uuid = tool_info.device_info.device.uuid;
+                }
             }
         }
         public virtual void Dispose()
