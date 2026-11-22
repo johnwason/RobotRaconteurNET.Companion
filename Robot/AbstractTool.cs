@@ -77,7 +77,7 @@ namespace RobotRaconteur.Companion.Robot
 
         protected virtual void _loop_thread_func(object obj)
         {
-            // Use a spin wait loop to get higher timing accurancy
+            // Use a spin wait loop to get higher timing accuracy
             SpinWait spin_wait = new SpinWait();
 
             long next_wait = _stopwatch.ElapsedMilliseconds;
