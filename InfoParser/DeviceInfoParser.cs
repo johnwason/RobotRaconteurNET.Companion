@@ -34,7 +34,7 @@ namespace RobotRaconteur.Companion.InfoParser
         public List<YamlDeviceOption> options { get; set; }
         public List<YamlDeviceCapability> capabilities { get; set; }
         public string serial_number { get; set; }
-        public List<YamlDeviceClass> device_classes;
+        public List<YamlDeviceClass> device_classes { get; set; }
         public string user_description { get; set; }
         public YamlResourceIdentifier description_resource { get; set; }
         public List<string> implemented_types { get; set; }
